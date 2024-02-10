@@ -1,4 +1,4 @@
-#include "onmt/Vocab.h"
+﻿#include "onmt/Vocab.h"
 
 #include <algorithm>
 #include <numeric>

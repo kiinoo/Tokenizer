@@ -1,4 +1,4 @@
-#include "onmt/ITokenizer.h"
+﻿#include "onmt/ITokenizer.h"
 
 #include <future>
 #include <mutex>
@@ -11,7 +11,7 @@
 namespace onmt
 {
 
-  const std::string ITokenizer::feature_marker("￨");
+  const std::string ITokenizer::feature_marker("ï¿¨");
 
 
   template <typename Output, typename Function>

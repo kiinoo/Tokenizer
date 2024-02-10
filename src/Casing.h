@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "onmt/Token.h"
 #include "onmt/unicode/Unicode.h"

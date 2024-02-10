@@ -1,4 +1,4 @@
-#include "onmt/SubwordEncoder.h"
+﻿#include "onmt/SubwordEncoder.h"
 
 #include <fstream>
 #include <limits>

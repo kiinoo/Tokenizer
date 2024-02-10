@@ -52,9 +52,16 @@ else()
   set(ICU_COMPONENTS uc data)
 endif()
 
+# set(ICU_DIR "C:/Program Files (x86)/icu")
+set(CMAKE_PREFIX_PATH "C:/Program Files (x86)/icu;${CMAKE_PREFIX_PATH}")
+
 if(NOT DEFINED ICU_INCLUDE_DIRS OR NOT DEFINED ICU_LIBRARIES)
   find_package(ICU REQUIRED COMPONENTS ${ICU_COMPONENTS})
 endif()
+
+set(ICU_LIBRARIES "C:/Program Files (x86)/icu/lib64/icuuc.lib;C:/Program Files (x86)/icu/lib64/icudt.lib")
+
+message(STATUS "ICU ${ICU_LIBRARIES}")
 
 set(INCLUDE_DIRECTORIES
   PUBLIC

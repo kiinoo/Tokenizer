@@ -1,4 +1,4 @@
-#include "onmt/unicode/Unicode.h"
+﻿#include "onmt/unicode/Unicode.h"
 
 #include <algorithm>
 #include <cstring>

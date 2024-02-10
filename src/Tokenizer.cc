@@ -1,4 +1,4 @@
-#include "onmt/Tokenizer.h"
+﻿#include "onmt/Tokenizer.h"
 
 #include "onmt/BPE.h"
 #include "onmt/SentencePiece.h"
@@ -14,21 +14,21 @@ namespace onmt
     set_random_generator_seed(seed);
   }
 
-  const std::string Tokenizer::joiner_marker = "￭";
-  const std::string Tokenizer::spacer_marker = "▁";
-  const std::string Tokenizer::ph_marker_open = "｟";
-  const std::string Tokenizer::ph_marker_close = "｠";
-  const std::string Tokenizer::escaped_character_prefix = "％";
+  const std::string Tokenizer::joiner_marker = "ï¿­";
+  const std::string Tokenizer::spacer_marker = "â–";
+  const std::string Tokenizer::ph_marker_open = "ï½Ÿ";
+  const std::string Tokenizer::ph_marker_close = "ï½ ";
+  const std::string Tokenizer::escaped_character_prefix = "ï¼…";
   const size_t Tokenizer::escaped_character_width = 4;
   static const unicode::code_point_t ph_marker_open_cp = 0xFF5F;
   static const unicode::code_point_t ph_marker_close_cp = 0xFF60;
   static const std::vector<std::pair<unicode::code_point_t, std::string>> substitutes = {
-    {0x2581 /* ▁ */, "_"},
-    {0xFFED /* ￭ */, "■"},
-    {0xFFE8 /* ￨ */, "│"},
-    {0xFF05 /* ％ */, "%"},
-    {0xFF03 /* ＃ */, "#"},
-    {0xFF1A /* ： */, ":"},
+    {0x2581 /* â– */, "_"},
+    {0xFFED /* ï¿­ */, "â– "},
+    {0xFFE8 /* ï¿¨ */, "â”‚"},
+    {0xFF05 /* ï¼… */, "%"},
+    {0xFF03 /* ï¼ƒ */, "#"},
+    {0xFF1A /* ï¼š */, ":"},
   };
 
   static const int placeholder_alphabet = -2;

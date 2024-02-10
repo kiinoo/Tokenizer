@@ -1,4 +1,4 @@
-#include "Casing.h"
+﻿#include "Casing.h"
 
 #include <algorithm>
 

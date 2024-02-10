@@ -1,4 +1,4 @@
-#include "onmt/SentencePiece.h"
+﻿#include "onmt/SentencePiece.h"
 
 #include <sentencepiece_processor.h>
 #include <stdexcept>
@@ -8,7 +8,7 @@
 namespace onmt
 {
 
-  static const std::string sp_marker("▁");
+  static const std::string sp_marker("â–");
 
   static inline void load_model(sentencepiece::SentencePieceProcessor& processor,
                                 const std::string& model_path)
