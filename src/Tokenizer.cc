@@ -805,11 +805,31 @@ namespace onmt
         TokensBuilder builder(_options, annotated_tokens);
         State state = State::Space;
         int prev_alphabet = -1;
-
+        bool commentStarts = false;
+        int nSlash = 0;
         for (size_t i = 0; i < chars.size(); ++i)
         {
             const auto& c = chars[i];
             const unicode::code_point_t v = c.value;
+            if (commentStarts)
+            {
+                if (v != 10) continue; // ignore comments
+            }
+           
+            if (v == '/')
+            {
+                nSlash += 1;
+                if (nSlash > 1) commentStarts = true;
+            }
+            else
+            {
+                nSlash = 0;
+                if (v == 10)
+                {
+                    commentStarts = false;
+                }
+            }
+
             if ((v < 32 || v == 0xFEFF) && v != 10)  // skip special characters and BOM, except \n (10)
                 continue;
 
